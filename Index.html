@@ -12,9 +12,10 @@
 
     <link rel="stylesheet" type="text/css" href="style.css">
     <!--Google Font  %7C -->
-    <link href="https://fonts.googleapis.com/css?family=Maven+Pro%7CRoboto+Slab&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Maven+Pro%7CRoboto&display=swap" rel="stylesheet">
+
     <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="nav_scripts.js"></script>
@@ -28,14 +29,16 @@
 
     <header>
         <div id="logo" class="menuUp">
-            <h1>Nicholas Siciliano</h1>
+            <a href="index.html"><h1>Nicholas Siciliano</h1></a>
             <div id="navToggle"><a href="#"><i class="fa fa-bars fa-2x"></i></a></div>
         </div>
         <nav>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Forum</a></li>
+                <li><a href="index.html">Portfolio</a></li>
+                
+<!--                <li><a href="#">For fun</a></li>-->
+                
+                <li><a href="about.html">About</a></li>
             </ul>
         </nav>
     </header>
@@ -43,7 +46,7 @@
     <main>
 
         <div class="hero_text">
-            <h1>UX Designer</h1>
+            <h1>UX/UI Designer &amp; Developer</h1>
         </div>
 
         <!--Grid View Start-->
@@ -53,18 +56,28 @@
             <div class="column">
                 <div class="container">
                     <img src="img/Group_highres.png" alt="Logistics Service" class="image">
-                    <div class="overlay">
-                        <div class="text">Pnbmove</div>
-                    </div>
+                    <a href="pnbmove.html">
+                        <div class="overlay">
+                            <div class="hover_text">Pnbmove</div>
+                            <div class="hover_stack">
+                                <i class="fab fa-sketch fa-lg"></i>
+                                <i class="fab fa-android fa-lg"></i>
+
+                            </div>
+
+                        </div>
+                    </a>
                 </div>
 
                 <!-- Oswebble -->
+<!--
                 <div class="container">
                     <img src="img/ScrabbleMockup.png" alt="Oswebble Game" class="image">
                     <div class="overlay">
-                        <div class="text">Oswebble</div>
+                        <div class="hover_text">Oswebble</div>
                     </div>
                 </div>
+-->
 
             </div>
 
@@ -73,19 +86,28 @@
             <div class="column">
 
                 <!--ChattyChattyBotBot-->
+<!--
                 <div class="container">
                     <img src="img/ChattyMockup.png" alt="Chat bot service" class="image">
                     <div class="overlay">
-                        <div class="text">ChattyChattyBotBot</div>
+                        <div class="hover_text">ChattyChattyBotBot</div>
                     </div>
                 </div>
+-->
 
                 <!--Dragon Town-->
                 <div class="container">
                     <img src="img/DragonMockup.png" alt="Community Center" class="image">
-                    <div class="overlay">
-                        <div class="text">Dragon Town Community Center</div>
-                    </div>
+                    <a href="dragon.html">
+                        <div class="overlay">
+                            <div class="hover_text">Dragon Town Community Center</div>
+                            <div class="hover_stack">
+                                <i class="fab fa-html5 fa-lg"></i>
+                                <i class="fab fa-css3-alt fa-lg"></i>
+                                <i class="fab fa-js fa-lg"></i>
+                            </div>
+                        </div>
+                    </a>
                 </div>
 
             </div>
@@ -100,33 +122,27 @@
     </main>
 
     <footer>
-
-
-
         <div class="footer-container">
             <div class="footer-item">
-
                 <h3>Resume</h3>
                 <a href="https://drive.google.com/file/d/1z3FE7cZR75-yUP9ZmJe9Mi2t_BVr3e4i/view?usp=sharing" target="_blank">Check it out</a>
             </div>
 
             <div class="footer-item">
                 <h3> Contact Info</h3>
-                <p class="footer_p">nicholas.siciliano@outlook.com</p>
-                <p>(845) 559-4178</p>
+                <a href="mailto:nicholas.siciliano@outlook.com">nicholas.siciliano@outlook.com</a>
+                <br>
+                <a href="tel:845-559-4178">(845) 559-4178</a>
             </div>
 
             <div class="footer-item">
                 <h3>Around the Web</h3>
-                <a href="#" class="fa fa-github"></a>
-                <a href="#" class="fa fa-instagram"></a>
-                <a href="#" class="fa fa-linkedin"></a>
+                <a href="https://github.com/nsicilia" target="_blank" class="fab fa-github fa-sm"></a>
+                <a href="https://www.instagram.com/nic_sic/?hl=en" target="_blank" class="fab fa-instagram fa-sm"></a>
+                <a href="https://www.linkedin.com/in/nicholassiciliano/" target="_blank" class="fab fa-linkedin  fa-sm"></a>
             </div>
 
         </div>
-
-
-
     </footer>
 
 

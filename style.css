@@ -1,5 +1,6 @@
 /*
 *Dark Theme Black: #121212;
+*White Text Color: #CCCCCC; 
 *Secondary Color Purple: #BB86FC;
 */
 * {
@@ -7,8 +8,8 @@
     padding: 0;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
-    font-family: 'Roboto Slab', serif;
-    color: white;
+    font-family: 'Roboto', sans-serif;
+    color: #CCCCCC;
     font-size: 16px;
 }
 
@@ -64,6 +65,8 @@ body {
     text-rendering: optimizeLegibility;
 }
 
+a {}
+
 a:link {
     text-decoration: none;
 }
@@ -73,6 +76,19 @@ a:hover {
     text-decoration: none;
 }
 
+a > h2 {
+    color: #BB86FC;
+    padding: 1rem;
+}
+
+a > h2:hover {
+    color: #BB86FC;
+    text-decoration: underline;
+}
+
+.hero {
+    width: 100%;
+}
 
 /*
 *----------NAVIGATION BAR SECTION-----------
@@ -107,6 +123,19 @@ header > div#logo > h1 {
     text-align: left;
     margin-left: 1rem;
     margin-bottom: 1rem;
+
+}
+
+header > div#logo > a > h1 {
+    /*Color of the logo text*/
+    color: aliceblue;
+    margin-top: 1rem;
+    font-weight: 300;
+    text-transform: lowercase;
+    text-align: left;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+
 }
 
 header > div#logo > div#navToggle {
@@ -134,7 +163,7 @@ header > div#logo > div#navToggle > a {
 
 header > div#logo > div#navToggle:hover > a {
     /*Menu button hover color*/
-    color: #BB86FC;
+    color: Blue;
 }
 
 header > nav {
@@ -143,7 +172,6 @@ header > nav {
 
     display: none;
     flex: 1;
-    transform: 300ms all ease;
 }
 
 header nav > ul {
@@ -163,7 +191,7 @@ header nav > ul > li:last-of-type {
 header nav > ul > li > a {
     display: block;
     /*nav item text color*/
-    color: white;
+    color: #CCCCCC;
     font-weight: 700;
     font-family: 'Maven Pro', sans-serif;
     padding: 1.5rem 0;
@@ -191,12 +219,158 @@ header > nav > ul > li:hover > a {
 }
 
 
+/*
+*----------SLIDESHOW SECTION-----------
+*/
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.slide_text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 0px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 12px;
+    width: 12px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+    background-color: #BB86FC;
+}
+
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+
+/*
+*--------------------BUTTON SECTION------------------
+*/
+
+.button {
+  background-color: #121212; /* Green */
+  border: none;
+  color: white;
+  padding: 12px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 3rem;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+    border-radius: 12px;
+}
+
+.button:hover {
+  background-color: #BB86FC;
+  color: white;
+}
+
+.button:visited{
+    background-color: gray;
+}
+
+.hero_buttons{
+  align-items: center;
+  justify-content: center;
+    text-align: center;
+}
+
 
 /*
 *--------------------MAIN PAGE SECTION------------------
 */
 main {
-    color: white;
+    color: #CCCCCC;
 }
 
 .hero_text {
@@ -234,13 +408,27 @@ main {
     opacity: 1;
 }
 
-.text {
+.hover_text {
     opacity: 1;
-    color: white;
+    color: #CCCCCC;
     font-family: 'Maven Pro', sans-serif;
     font-size: 20px;
     position: absolute;
     top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.hover_stack {
+    opacity: 1;
+    color: #CCCCCC;
+    font-family: 'Maven Pro', sans-serif;
+    font-size: 20px;
+    position: absolute;
+    top: 60%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
@@ -281,9 +469,8 @@ main {
 *----------PAGE FOOTER SECTION-----------
 */
 
-
 .footer-container {
-    margin-top: 8rem;
+    margin-top: 14rem;
     display: grid;
     grid-template-columns: auto;
     padding: 10px;
@@ -297,6 +484,7 @@ main {
 
 .footer_p {
     margin-top: 1rem;
+    font-family: 'Maven Pro', sans-serif;
 }
 
 
@@ -317,26 +505,272 @@ main {
 
 .fa-github {
     margin-top: 1rem;
-    color: white;
+    margin-right: 1rem;
+    color: #CCCCCC;
 }
 
 .fa-instagram {
-    color: white;
+    color: #CCCCCC;
+        margin-right: 1rem;
+
 }
 
 .fa-linkedin {
-    color: white;
+    color: #CCCCCC;
 }
 
 
 
 
+/*
+*----------PNBMOVE SECTION-----------
+*/
+
+.pnb_hero {
+    object-fit: cover;
+    object-position: 50% 0;
+    width: 100%;
+    height: 450px;
+}
+
+.pnb_textblock_hero {
+    margin: 2rem;
+    text-align: center;
+}
+
+.pnb_textblock_hero > h1 {
+    margin: 1rem;
+}
+
+.pnb_textblock_hero > p {
+
+    text-align: left;
+}
+
+.pnb_textblock {
+    margin: 2rem;
+    text-align: center;
+}
+
+.pnb_textblock > h1 {
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+.pnb_textblock > p {
+    text-align: left;
+}
+
+.pnb_row_competitive {
+    display: grid;
+    grid-template-columns: auto;
+    padding: 20px;
+
+}
+
+.pnb_comp_logos {
+    margin: auto;
+    width: 15em;
+    padding: 20px;
+}
+
+.pnb_comp_logos_lugg {
+    margin: auto;
+    width: 10rem;
+    padding: 20px;
+}
+
+.pnb_survey_img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 98%;
+}
+
+.pnb_wireframe_img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 98%;
+}
+
+.pnb_general_img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 98%;
+}
+
+.pnb_poster_img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 98%;
+}
+
+/*
+*-----------------DRAGON SECTION------------------
+*/
+
+.dragon_hero {
+    width: 100%;
+}
+
+.dragon_textblock_background {
+    padding: 2rem;
+    text-align: left;
+    background-color: #212121;
+}
+
+.dragon_textblock_background > h1 {
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+.dragon_textblock_background > p {
+
+    text-align: left;
+}
+
+
+.dragon_textblock {
+    margin: 2rem;
+    text-align: center;
+}
+
+.dragon_textblock > h1 {
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+.dragon_textblock > p {
+
+    text-align: left;
+}
+
+
+
+.dragon_pitch {
+    margin-top: 2rem;
+    width: 90%;
+}
+
+.dragon_pitch_list {
+    text-align: left;
+    margin-left: 1rem;
+    margin-top: 1rem;
+}
+
+.dragon_pitch_list > li {
+    margin: 1rem;
+}
+
+
+
+.dragon_textblock_role {
+    padding: 2rem;
+    text-align: center;
+}
+
+.dragon_textblock_role > h1 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.dragon_textblock_role > p {
+
+    text-align: left;
+}
+
+
+.dragon_three_grid {
+    display: grid;
+    grid-template-columns: auto;
+    padding: 10px;
+
+}
+
+.dragon_three_grid > img {
+    width: 65%;
+    margin: auto;
+    padding: 10px;
+}
+
+
+.dragon_split_img {
+    display: grid;
+    grid-template-columns: auto;
+    padding: 1rem;
+}
+
+
+.dragon_analysis_grid {
+    display: grid;
+    grid-template-columns: auto;
+    padding: 1rem;
+}
+
+
+
+.dragon_wireframe_img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 98%;
+}
+
+.dragon_analysis_item {
+    padding: 1rem;
+    text-align: center;
+}
+
+.dragon_github {
+    text-align: center;
+}
+
+.dragon_sketch_img {
+    margin: auto;
+    padding-top: 1rem;
+    width: 80%;
+}
+
+.dragon_module_img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    width: 95%;
+}
+
+
+/*
+*-----------------DRAGON SECTION------------------
+*/
+
+
+.about_img{
+    display: block;
+    margin: auto;
+    width: 90%;
+}
+
+
+
+/*
+*--------------------------------------------------------------
+*-------------------MEDIA SCREEN 700px-------------------------
+*--------------------------------------------------------------
+*/
 
 @media screen and (min-width: 700px) {
 
     /*
 *----------NAVIGATION BAR SECTION-----------
 */
+
+    body {
+        font-size: 18px;
+    }
 
     header > div#logo > div#navToggle {
         display: none;
@@ -359,7 +793,7 @@ main {
 
     header > div#logo > h1 {
         margin-left: 0rem;
-        color: white;
+        color: #CCCCCC;
     }
 
     header > nav {
@@ -387,9 +821,7 @@ main {
 
 
 
-    
-    
-/*
+    /*
 *----------  SECTION-----------
 */
 
@@ -397,6 +829,10 @@ main {
         font-size: 2.5em;
         /* 2.5x body copy size = 40px */
         line-height: 1.125;
+    }
+
+    .p {
+        font-size: 18px;
     }
 
     .column {
@@ -408,10 +844,205 @@ main {
     .footer-container {
         grid-template-columns: auto auto auto;
     }
+
+
+    /*
+*----------SLIDESHOW SECTION-----------
+*/
+
+    /* Slideshow container */
+    .slideshow-container {
+        max-width: 500px;
+        padding-bottom: 1rem;
+        position: relative;
+        margin: auto;
+    }
+
+    .prev,
+    .next {
+        font-size: 32px;
+    }
+
+    /* Caption text */
+    .slide_text {
+        color: #f2f2f2;
+        font-size: 29px;
+        padding: 6px 12px;
+        position: absolute;
+        bottom: 8px;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Number text (1/3 etc) */
+    .numbertext {
+        color: #f2f2f2;
+        font-size: 18px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+    }
+
+
+    /*
+*----------PNBMOVE SECTION-----------
+*/
+
+    .pnb_hero {
+        object-fit: cover;
+        object-position: 50% 0;
+        width: 100%;
+        height: 600px;
+    }
+
+
+    .pnb_textblock > p {
+        text-align: left;
+        max-width: 700px;
+        font-size: 22px;
+        margin-left: 2rem;
+    }
+
+    .pnb_survey_img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+    }
+
+    .pnb_wireframe_img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+    }
+
+    .pnb_general_img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+    }
+
+    .pnb_poster_img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+    }
+
+
+
+    /*
+*----------DRAGON SECTION-----------
+*/
+
+
+    .dragon_hero {
+        width: 100%;
+    }
+
+    .dragon_textblock{
+        margin: 6rem;
+    }
+    
+    
+    .dragon_textblock > p {
+        text-align: left;
+        max-width: 700px;
+        font-size: 22px;
+        margin-left: 2rem;
+    }
+
+    
+    .dragon_textblock_role > p {
+        text-align: center;
+        max-width: 700px;
+        font-size: 22px;
+        margin: auto;
+    }
+
+    .dragon_textblock_background{
+        padding: 6rem;
+    }
+    
+    .dragon_textblock_background > p {
+        text-align: left;
+        max-width: 700px;
+        font-size: 22px;
+        margin-left: 2rem;
+    }
+
+    .dragon_split_img {
+        display: grid;
+        grid-template-columns: auto auto;
+        padding: 1rem;
+    }
+
+
+    .dragon_three_grid {
+        grid-template-columns: auto auto auto;
+    }
+
+    .dragon_three_grid > img {
+        width: 95%;
+        padding: 0px;
+    }
+
+
+    .dragon_pitch_list {
+        margin-left: 3rem;
+    }
+
+    .dragon_pitch_list > li {
+        font-size: 18px;
+
+    }
+
+    .dragon_wireframe_img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 110%;
+    }
+
+    .dragon_sketch_img {
+        margin: auto;
+        padding-top: 0rem;
+        width: 70%;
+    }
+
+    .dragon_module_img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 10px;
+        width: 85%;
+    }
+
+    .dragon_analysis_item {
+        padding: 1rem;
+        margin: auto;
+        width: 80%;
+        text-align: center;
+    }
+    
+    
+    
+    
+    
 }
 
+/* 700px End*/
 
 
+
+
+/*
+*--------------------------------------------------------------
+*-------------------MEDIA SCREEN 1068px-------------------------
+*--------------------------------------------------------------
+*/
 @media screen and (min-width: 1068px) {
 
     h1 {
@@ -432,4 +1063,218 @@ main {
         margin-top: 20px;
         padding-top: 20px;
     }
+
+
+
+    /*
+*----------SLIDESHOW SECTION-----------
+*/
+
+    /* Slideshow container */
+    .slideshow-container {
+        max-width: 29%;
+        padding-bottom: 1rem;
+        position: relative;
+        margin: auto;
+    }
+
+    .prev,
+    .next {
+        font-size: 32px;
+    }
+
+    /* Caption text */
+    .slide_text {
+        color: #f2f2f2;
+        font-size: 20px;
+        padding: 6px 1px;
+        position: absolute;
+        bottom: 8px;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Number text (1/3 etc) */
+    .numbertext {
+        color: #f2f2f2;
+        font-size: 18px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+    }
+
+
+    /*
+*----------PNBMOVE SECTION-----------
+*/
+
+    .pnb_hero {
+        object-fit: cover;
+        object-position: 50% 0;
+        width: 100%;
+        height: 550px;
+    }
+
+    .pnb_textblock {
+        margin: 7%;
+        text-align: center;
+    }
+
+    .pnb_textblock_hero > h2 {
+        margin: 4rem;
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .pnb_survey_img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+    }
+
+    .pnb_wireframe_img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 70%;
+    }
+
+    .pnb_general_img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }
+
+    .pnb_poster_img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 40%;
+    }
+
+    .pnb_split_img {
+        display: grid;
+        grid-template-columns: auto auto;
+        padding: 1rem;
+    }
+
+
+
+    /*
+*----------DRAGON SECTION-----------
+*/
+
+
+    .dragon_hero {
+        width: 100%;
+    }
+    
+    .dragon_analysis_item {
+        padding: 1rem;
+        margin: auto;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .dragon_module_img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 10px;
+        width: 75%;
+    }
+    
+    .dragon_analysis_grid {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 1rem;
+}
+    
+
+/*
+*----------ABOUT SECTION-----------
+*/
+    
+    .about_img{
+    padding-top: 3rem;
+    display: block;
+    margin: auto;
+    width: 70%;
+}
+    
+    .pnb_textblock_hero > h3{
+        max-width: 700px;
+    }
+
+    
+}
+
+
+/*
+*--------------------------------------------------------------
+*-------------------MEDIA SCREEN 1068px-------------------------
+*--------------------------------------------------------------
+*/
+@media screen and (min-width: 1368px) {
+    .pnb_hero {
+        object-fit: cover;
+        object-position: 50% 0;
+        width: 100%;
+        height: 750px;
+    }
+
+    .pnb_textblock_hero > h2 {
+        margin: 8rem;
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .pnb_textblock {
+        margin: 7%;
+        padding-left: 8rem;
+        text-align: center;
+    }
+
+    .pnb_poster_img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 30%;
+    }
+
+    /*
+*----------DRAGON SECTION-----------
+*/
+
+
+    .dragon_hero {
+        width: 100%;
+    }
+    
+    .dragon_sketch_img {
+    margin: auto;
+    padding-top: 1rem;
+    width: 80%;
+}
+    
+    .dragon_wireframe_img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+    }
+    
+    
+    /*
+*----------ABOUT SECTION-----------
+*/
+    
+    .about_img{
+    padding-top: 3rem;
+    display: block;
+    margin: auto;
+    width: 50%;
+}
 }
